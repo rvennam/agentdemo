@@ -1,0 +1,17 @@
+apiVersion: ar.dev/v1alpha1
+kind: Agent
+metadata:
+  name: agentdemo
+spec:
+  description: Dice-rolling demo agent
+  modelName: gpt-5.4-nano
+  modelProvider: openai
+  source:
+    image: us-central1-docker.pkg.dev/field-engineering-us/agents/agentdemo:1.0.0
+    repository:
+      branch: main
+      url: https://github.com/rvennam/agentdemo
+  mcpServers:
+  - kind: MCPServer
+    name: everything-server
+    tag: "2026.7.4"
