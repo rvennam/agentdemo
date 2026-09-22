@@ -1,0 +1,17 @@
+[project]
+name = "agentdemo"
+version = "0.1"
+description = "agentdemo agent"
+readme = "README.md"
+dependencies = [
+  # Match the Google ADK version supplied by the Kagent base image.
+  "google-adk==1.38.0",
+  # Use Google ADK's supported LiteLLM range without unrelated extensions.
+  "litellm>=1.83.7,<=1.83.14",
+]
+# Match the Python interpreter supplied by the Kagent base image.
+requires-python = ">=3.13,<3.14"
+
+[tool.uv]
+# Keep the tested resource detector version stable across builds.
+constraint-dependencies = ["opentelemetry-resourcedetector-gcp==1.14.0"]

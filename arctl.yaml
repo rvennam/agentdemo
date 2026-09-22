@@ -1,0 +1,4 @@
+framework: adk
+language: python
+requiredEnv:
+    - OPENAI_API_KEY
